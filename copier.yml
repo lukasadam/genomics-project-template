@@ -1,0 +1,27 @@
+_name: Genomics data science project
+project_name:
+  type: str
+  help: Human-readable project name
+  default: My genomics project
+project_slug:
+  type: str
+  help: Repository directory and Python package name
+  default: "{{ project_name | lower | replace(' ', '-') }}"
+package_name:
+  type: str
+  help: Importable Python package name
+  default: "{{ project_slug | replace('-', '_') }}"
+author_name:
+  type: str
+  help: Author name
+  default: Lukas Adam
+author_email:
+  type: str
+  help: Author email
+  default: gm.lukas.adam@gmail.com
+genomics_toolkit_path:
+  type: str
+  help: Local path to the genomics-toolkit checkout
+  default: ../genomics-toolkit
+_templates_suffix: ""
+_subdirectory: template
